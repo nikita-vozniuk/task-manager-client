@@ -8,6 +8,13 @@ This is a simple task manager app built using React, Redux Toolkit, and Tailwind
 - Mark tasks as completed
 - Filter tasks by status (All, Active, Completed)
 
+## Ideas
+- Task Prioritization
+- Task Categories or Tags
+- Task Reminders and Notifications
+- Task Sharing and Collaboration
+- Task Analytics and Insights
+
 ## Installation
 1. Clone the repository:
     ```bash
