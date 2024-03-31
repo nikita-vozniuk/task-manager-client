@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 import { useAppSelector, useAppDispatch } from './features/hooks/redux';
 import { isAuth } from './features/reducers/authSlice';
-import { fetchAllUserTasks } from './features/reducers/taskSlice';
+import { fetchAllUserTasks } from './features/reducers/taskActions';
 
 import Loader from './components/Loader';
 

@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import { useAppDispatch } from '../features/hooks/redux';
+import { updateTask, deleteTask } from '../features/reducers/taskActions';
+
 import { ITask } from '../types';
 
 const Task: React.FC<{ task: ITask }> = ({ task }) => {
+    const dispatch = useAppDispatch();
+
     const [showDeletePopup, setShowDeletePopup] = useState<boolean>(false);
     const [showUpdatePopup, setShowUpdatePopup] = useState<boolean>(false);
     const [updatedTask, setUpdatedTask] = useState<ITask>(task);
 
-    const handleDelete = () => {};
+    const handleDelete = () => {
+        dispatch(deleteTask(updatedTask._id));
+    };
 
-    const handleUpdate = () => {};
+    const handleUpdate = () => {
+        dispatch(updateTask({ taskId: updatedTask._id, updatedTask }));
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;

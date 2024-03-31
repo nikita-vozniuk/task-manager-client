@@ -11,3 +11,11 @@ export const createNewTaskAPI = async (taskData: ITask) => {
 export const getAllUserTasksAPI = async (userId: string) => {
     return await axios.post(backendUrl + '/tasks/user', { userId });
 };
+
+export const deleteTaskAPI = async (taskId: string) => {
+    return await axios.delete(`${backendUrl}/tasks/${taskId}`);
+};
+
+export const updateTaskAPI = async (taskId: string, updatedTask: ITask) => {
+    return await axios.put(`${backendUrl}/tasks/${taskId}`, updatedTask);
+};

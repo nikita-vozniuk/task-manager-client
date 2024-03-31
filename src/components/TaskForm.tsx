@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../features/hooks/redux';
-import { createNewTask } from '../features/reducers/taskSlice';
+import { createNewTask } from '../features/reducers/taskActions';
 
 const TaskForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const dispatch = useAppDispatch();
